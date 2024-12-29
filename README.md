@@ -1,5 +1,4 @@
-@@ -1 +1,13 @@
-# CNPM-Nh-m-7
+
 # CNPM-Nh-m-7
 "Phần mềm quản lý đấu giá trang sức trực tuyến của công ty đấu giá
 - Trang chủ giới thiệu công ty đấu giá, trang sức đấu giá, chính sách qui định, blog chia sẽ, …
