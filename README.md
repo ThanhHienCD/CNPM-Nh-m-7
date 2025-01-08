@@ -9,4 +9,5 @@
 - Quản lý trang sức tham gia đấu giá.
 - Khai báo phí giao dịch mà bên mua/bán phải nộp cho công ty.
 - Dashboard thống kê."
+demo
 ![image](https://github.com/user-attachments/assets/47d75a26-cb0b-4c3d-8ea7-b18662bc353d)
