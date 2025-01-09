@@ -1,0 +1,756 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block banner_slider %}
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6" aria-label="Slide 7"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7" aria-label="Slide 8"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8" aria-label="Slide 9"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="9" aria-label="Slide 10"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="10" aria-label="Slide 11"></button>
+     
+    
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/1.png' %}" class="d-block w-100" alt="Slide 1" height='600'> 
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/2.png' %}" class="d-block w-100" alt="Slide 2" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/12.png' %}" class="d-block w-100" alt="Slide 3" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/3.png' %}" class="d-block w-100" alt="Slide 4" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/7.png' %}" class="d-block w-100" alt="Slide 8" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/8.png' %}" class="d-block w-100" alt="Slide 9" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/4.png' %}" class="d-block w-100" alt="Slide 5" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/5.png' %}" class="d-block w-100" alt="Slide 6" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/6.png' %}" class="d-block w-100" alt="Slide 7" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/9.png' %}" class="d-block w-100" alt="Slide 10" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/10.png' %}" class="d-block w-100" alt="Slide 11" height='600'>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+{% endblock banner_slider %}
+{% block main-content %}
+<br /><br />
+<div class="container">
+  <div class="row" g-2>
+    <!-- Sản phẩm 1 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="box-element product text-center">
+        <!-- Bao bọc hình ảnh -->
+        <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+          <img class="thumbnail" src="{% static 'app/image/i1.png' %}" alt="Vòng cổ Nature's Radiance" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+        </div>
+        <small><strong>Vòng cổ Nature's Radiance</strong></small>
+        <hr style="width: 90%; margin: 5px auto;">
+        <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+          <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+            Giá khởi điểm:
+          </button>
+          <h6 style="font-size: 16px; margin: 0;">200.000.000 VND</h6>
+        </div>
+        <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+          <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+            Trạng thái:
+          </button>
+          <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+        </div>
+        <div class="mt-3">
+          <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+            Chi tiết
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sản phẩm 2 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="box-element product text-center">
+        <!-- Bao bọc hình ảnh -->
+        <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+          <img class="thumbnail" src="{% static 'app/image/i2.png' %}" alt="Vòng cổ Aloha" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+        </div>
+        <small><strong>Vòng cổ Aloha</strong></small>
+        <hr style="width: 90%; margin: 5px auto;">
+        <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+          <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+            Giá khởi điểm:
+          </button>
+          <h6 style="font-size: 16px; margin: 0;">92.000.000 VND</h6>
+        </div>
+        <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+          <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+            Trạng thái:
+          </button>
+          <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+        </div>
+        <div class="mt-3">
+          <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+            Chi tiết
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Sản phẩm 3 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="box-element product text-center">
+        <!-- Bao bọc hình ảnh -->
+        <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+          <img class="thumbnail" src="{% static 'app/image/i3.png' %}" alt="Khuyên Sunset" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+        </div>
+        <small><strong>Khuyên Sunset</strong></small>
+        <hr style="width: 90%; margin: 5px auto;">
+        <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+          <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+            Giá khởi điểm:
+          </button>
+          <h6 style="font-size: 16px; margin: 0;">30.000.000 VND</h6>
+        </div>
+        <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+          <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+            Trạng thái:
+          </button>
+          <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+        </div>
+        <div class="mt-3">
+          <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+            Chi tiết
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Sản phẩm 4 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="box-element product text-center">
+        <!-- Bao bọc hình ảnh -->
+        <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+          <img class="thumbnail" src="{% static 'app/image/i4.png' %}" alt="Trâm Ocean" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+        </div>
+        <small><strong>Trâm Ocean</strong></small>
+        <hr style="width: 90%; margin: 5px auto;">
+        <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+          <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+            Giá khởi điểm:
+          </button>
+          <h6 style="font-size: 16px; margin: 0;">45.000.000 VND</h6>
+        </div>
+        <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+          <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+            Trạng thái:
+          </button>
+          <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+        </div>
+        <div class="mt-3">
+          <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+            Chi tiết
+          </a>
+        </div>
+      </div>
+    </div>
+  
+<!--2______________________________________________________________________________________________________________-->
+   <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+    <div class="box-element product text-center">
+      <!-- Bao bọc hình ảnh -->
+      <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+        <img class="thumbnail" src="{% static 'app/image/i5.png' %}" alt=" Vương miện The Chanel Ethereal" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+      </div>
+      <small><strong> Vương miện The Chanel Ethereal</strong></small>
+      <hr style="width: 90%; margin: 5px auto;">
+      <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+        <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+          Giá khởi điểm:
+        </button>
+        <h6 style="font-size: 16px; margin: 0;">200.000.000 VND</h6>
+      </div>
+      <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+        <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+          Trạng thái:
+        </button>
+        <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+      </div>
+      <div class="mt-3">
+        <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+          Chi tiết
+        </a>
+      </div>
+    </div>
+  </div>
+
+      <!-- Sản phẩm 2 -->
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="box-element product text-center">
+          <!-- Bao bọc hình ảnh -->
+          <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+            <img class="thumbnail" src="{% static 'app/image/i6.png' %}" alt=" Vòng cổ Blossom Grace" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+          </div>
+          <small><strong> Vòng cổ Blossom Grace</strong></small>
+          <hr style="width: 90%; margin: 5px auto;">
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Giá khởi điểm:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">55.000.000 VND</h6>
+          </div>
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Trạng thái:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+              Chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Sản phẩm 3 -->
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="box-element product text-center">
+          <!-- Bao bọc hình ảnh -->
+          <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+            <img class="thumbnail" src="{% static 'app/image/i7.png' %}" alt="Vòng tay Lacloche Frères" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+          </div>
+          <small><strong>Vòng tay Lacloche Frères</strong></small>
+          <hr style="width: 90%; margin: 5px auto;">
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Giá khởi điểm:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">30.000.000 VND</h6>
+          </div>
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Trạng thái:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+              Chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+     
+      <!-- Sản phẩm 4 -->
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="box-element product text-center">
+          <!-- Bao bọc hình ảnh -->
+          <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+            <img class="thumbnail" src="{% static 'app/image/i8.png' %}" alt="Vòng cổ Ethereal Ice" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+          </div>
+          <small><strong>Vòng cổ Ethereal Ice</strong></small>
+          <hr style="width: 90%; margin: 5px auto;">
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Giá khởi điểm:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">70.000.000 VND</h6>
+          </div>
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Trạng thái:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+              Chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+<!--3______________________________________________________________________________________________________________-->
+
+<!--Sản phẩm 1-->
+<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+    <div class="box-element product text-center">
+      <!-- Bao bọc hình ảnh -->
+      <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+        <img class="thumbnail" src="{% static 'app/image/i9.png' %}" alt="Đồng hồ Heures Florales Cerisier" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+      </div>
+      <small><strong>Đồng hồ Heures Florales Cerisier</strong></small>
+      <hr style="width: 90%; margin: 5px auto;">
+      <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+        <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+          Giá khởi điểm:
+        </button>
+        <h6 style="font-size: 16px; margin: 0;">170.000.000 VND</h6>
+      </div>
+      <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+        <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+          Trạng thái:
+        </button>
+        <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+      </div>
+      <div class="mt-3">
+        <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+          Chi tiết
+        </a>
+      </div>
+    </div>
+  </div>
+    <!-- Sản phẩm 2 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="box-element product text-center">
+          <!-- Bao bọc hình ảnh -->
+          <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+            <img class="thumbnail" src="{% static 'app/image/i10.png' %}" alt=" Vòng tay Blush Harmony" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+          </div>
+          <small><strong> Vòng tay Blush Harmony</strong></small>
+          <hr style="width: 90%; margin: 5px auto;">
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Giá khởi điểm:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">90.000.000 VND</h6>
+          </div>
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Trạng thái:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+              Chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+    <!-- Sản phẩm 3 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="box-element product text-center">
+          <!-- Bao bọc hình ảnh -->
+          <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+            <img class="thumbnail" src="{% static 'app/image/i11.png' %}" alt="Nhẫn Golden Bloom" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+          </div>
+          <small><strong>Nhẫn Golden Bloom</strong></small>
+          <hr style="width: 90%; margin: 5px auto;">
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Giá khởi điểm:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">34.000.000 VND</h6>
+          </div>
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Trạng thái:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+              Chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+    <!-- Sản phẩm 4 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="box-element product text-center">
+          <!-- Bao bọc hình ảnh -->
+          <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+            <img class="thumbnail" src="{% static 'app/image/i12.png' %}" alt="Khuyên Pastel Symphony" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+          </div>
+          <small><strong>  Khuyên Pastel Symphony</strong></small>
+          <hr style="width: 90%; margin: 5px auto;">
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Giá khởi điểm:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">42.000.000 VND</h6>
+          </div>
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Trạng thái:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+              Chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+<!--4______________________________________________________________________________________________________________-->
+<!-- Sản phẩm 1 -->
+<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+    <div class="box-element product text-center">
+      <!-- Bao bọc hình ảnh -->
+      <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+        <img class="thumbnail" src="{% static 'app/image/i13.png' %}" alt="Vòng tay Vintage Alhambra" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+      </div>
+      <small><strong>Vòng tay Vintage Alhambra</strong></small>
+      <hr style="width: 90%; margin: 5px auto;">
+      <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+        <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+          Giá khởi điểm:
+        </button>
+        <h6 style="font-size: 16px; margin: 0;">80.000.000 VND</h6>
+      </div>
+      <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+        <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+          Trạng thái:
+        </button>
+        <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+      </div>
+      <div class="mt-3">
+        <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+          Chi tiết
+        </a>
+      </div>
+    </div>
+  </div>
+    <!-- Sản phẩm 2 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="box-element product text-center">
+          <!-- Bao bọc hình ảnh -->
+          <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+            <img class="thumbnail" src="{% static 'app/image/i14.png' %}" alt="Nhẫn Rainbow Garden Tennis" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+          </div>
+          <small><strong>Nhẫn Rainbow Garden Tennis</strong></small>
+          <hr style="width: 90%; margin: 5px auto;">
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Giá khởi điểm:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">69.000.000 VND</h6>
+          </div>
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Trạng thái:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+              Chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+    <!-- Sản phẩm 3 -->
+   <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="box-element product text-center">
+          <!-- Bao bọc hình ảnh -->
+          <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+            <img class="thumbnail" src="{% static 'app/image/i15.png' %}" alt="Vòng tay Vintage Alhambra" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+          </div>
+          <small><strong>Vòng tay Vintage Alhambra</strong></small>
+          <hr style="width: 90%; margin: 5px auto;">
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Giá khởi điểm:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">99.000.000 VND</h6>
+          </div>
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Trạng thái:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+              Chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+    <!-- Sản phẩm 4 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="box-element product text-center">
+          <!-- Bao bọc hình ảnh -->
+          <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+            <img class="thumbnail" src="{% static 'app/image/i16.png' %}" alt=" Đồng hồ Pont des Amoureux Hiver" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+          </div>
+          <small><strong> Đồng hồ Pont des Amoureux Hiver</strong></small>
+          <hr style="width: 90%; margin: 5px auto;">
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Giá khởi điểm:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">89.000.000 VND</h6>
+          </div>
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Trạng thái:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+              Chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+<!--5______________________________________________________________________________________________________________-->
+<!-- Sản phẩm 1 -->
+<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+    <div class="box-element product text-center">
+      <!-- Bao bọc hình ảnh -->
+      <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+        <img class="thumbnail" src="{% static 'app/image/i17.png' %}" alt=" Nhẫn Vintage Starlight" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+      </div>
+      <small><strong> Nhẫn Vintage Starlight</strong></small>
+      <hr style="width: 90%; margin: 5px auto;">
+      <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+        <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+          Giá khởi điểm:
+        </button>
+        <h6 style="font-size: 16px; margin: 0;">39.000.000 VND</h6>
+      </div>
+      <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+        <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+          Trạng thái:
+        </button>
+        <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+      </div>
+      <div class="mt-3">
+        <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+          Chi tiết
+        </a>
+      </div>
+    </div>
+  </div>
+    <!-- Sản phẩm 2 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="box-element product text-center">
+          <!-- Bao bọc hình ảnh -->
+          <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+            <img class="thumbnail" src="{% static 'app/image/i18.png' %}" alt=" Vòng tay Crystal Lattice" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+          </div>
+          <small><strong> Vòng tay Crystal Lattice</strong></small>
+          <hr style="width: 90%; margin: 5px auto;">
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Giá khởi điểm:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">89.000.000 VND</h6>
+          </div>
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Trạng thái:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+              Chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+    <!-- Sản phẩm 3 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="box-element product text-center">
+          <!-- Bao bọc hình ảnh -->
+          <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+            <img class="thumbnail" src="{% static 'app/image/i19.png' %}" alt=" Vòng cổ Frivole pendant" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+          </div>
+          <small><strong> Vòng cổ Frivole pendant</strong></small>
+          <hr style="width: 90%; margin: 5px auto;">
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Giá khởi điểm:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">89.000.000 VND</h6>
+          </div>
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Trạng thái:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+              Chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+    <!-- Sản phẩm 4 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="box-element product text-center">
+          <!-- Bao bọc hình ảnh -->
+          <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+            <img class="thumbnail" src="{% static 'app/image/i20.png' %}" alt="  Nhẫn Frivole Between the Finger" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+          </div>
+          <small><strong> Nhẫn Frivole Between the Finger</strong></small>
+          <hr style="width: 90%; margin: 5px auto;">
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Giá khởi điểm:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">55.000.000 VND</h6>
+          </div>
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Trạng thái:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+              Chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+<!--6______________________________________________________________________________________________________________-->
+<!-- Sản phẩm 1 -->
+<div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+    <div class="box-element product text-center">
+      <!-- Bao bọc hình ảnh -->
+      <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+        <img class="thumbnail" src="{% static 'app/image/i21.png' %}" alt=" Vòng cổ và khuyên The Golden Drops" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+      </div>
+      <small><strong>Vòng cổ và khuyên The Golden Drops</strong></small>
+      <hr style="width: 90%; margin: 5px auto;">
+      <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+        <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+          Giá khởi điểm:
+        </button>
+        <h6 style="font-size: 16px; margin: 0;">55.000.000 VND</h6>
+      </div>
+      <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+        <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+          Trạng thái:
+        </button>
+        <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+      </div>
+      <div class="mt-3">
+        <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+          Chi tiết
+        </a>
+      </div>
+    </div>
+  </div>
+    <!-- Sản phẩm 2 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="box-element product text-center">
+          <!-- Bao bọc hình ảnh -->
+          <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+            <img class="thumbnail" src="{% static 'app/image/i22.png' %}" alt=" Trâm cài The Pearl Flower Series" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+          </div>
+          <small><strong> Trâm cài The Pearl Flower Series</strong></small>
+          <hr style="width: 90%; margin: 5px auto;">
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Giá khởi điểm:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">55.000.000 VND</h6>
+          </div>
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Trạng thái:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+              Chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+    <!-- Sản phẩm 3 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="box-element product text-center">
+          <!-- Bao bọc hình ảnh -->
+          <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+            <img class="thumbnail" src="{% static 'app/image/i23.png' %}" alt="  Vương miện Turquoise Series" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+          </div>
+          <small><strong>  Vương miện Turquoise Series</strong></small>
+          <hr style="width: 90%; margin: 5px auto;">
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Giá khởi điểm:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">55.000.000 VND</h6>
+          </div>
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Trạng thái:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+              Chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+    <!-- Sản phẩm 4 -->
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="box-element product text-center">
+          <!-- Bao bọc hình ảnh -->
+          <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+            <img class="thumbnail" src="{% static 'app/image/i24.png' %}" alt="Vòng cổ The Rainbow Collar" style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+          </div>
+          <small><strong> Vòng cổ The Rainbow Collar</strong></small>
+          <hr style="width: 90%; margin: 5px auto;">
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Giá khởi điểm:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">55.000.000 VND</h6>
+          </div>
+          <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+            <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+              Trạng thái:
+            </button>
+            <h6 style="font-size: 16px; margin: 0;">Sắp diễn ra</h6>
+          </div>
+          <div class="mt-3">
+            <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto" href="#" style="width: 240px; height: 40px; font-size: 16px;">
+              Chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+
+</div>
+<br /><br />
+{% endblock main-content %}

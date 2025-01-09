@@ -1,0 +1,95 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block cart_content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box-element p-3 bg-light border rounded">
+
+                <!-- Nút quay lại và thông tin tổng sản phẩm -->
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <a class="btn btn-outline-dark" href="{% url 'home' %}">
+                        &#x2190; Tiếp tục đấu giá
+                    </a>
+                    <div>
+                        <h5 class="d-inline-block me-4">Sản phẩm: <strong>3</strong></h5>
+                        <h5 class="d-inline-block">Tổng: <strong>$42</strong></h5>
+                    </div>
+                    <a class="btn btn-dark" href="{% url 'checkout' %}">Thanh toán</a>
+                </div>
+
+                <!-- Bảng danh sách sản phẩm -->
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Sản phẩm</th>
+                                <th>Giá khởi điểm</th>
+                                <th>Giá hiện tại</th>
+                                <th>Thời gian kết thúc</th>
+                                <th>Trạng thái</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Phiên đấu giá 1 -->
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="{% static 'app/image/p.png' %}" alt="Slide 1" class="img-thumbnail me-3" style="width: 100px;">
+                                        <p class="mb-0">Dây chuyền vàng</p>
+                                    </div>
+                                </td>
+                                <td>$1,000,000</td>
+                                <td>$1,500,000</td>
+                                <td>10 phút nữa</td>
+                                <td>Đang đấu giá</td>
+                                <td>
+                                    <a href="#" class="btn btn-secondary btn-sm mb-1">Tham gia</a>
+                                    <a href="#" class="btn btn-dark btn-sm">Xem chi tiết</a>
+                                </td>
+                            </tr>
+
+                            <!-- Phiên đấu giá 2 -->
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="{% static 'app/image/p.png' %}" alt="Slide 2" class="img-thumbnail me-3" style="width: 100px;">
+                                        <p class="mb-0">Nhẫn bạc</p>
+                                    </div>
+                                </td>
+                                <td>$500,000</td>
+                                <td>Sắp đấu giá</td>
+                                <td>1 giờ nữa</td>
+                                <td>Chưa tham gia</td>
+                                <td>
+                                    <a href="#" class="btn btn-secondary btn-sm mb-1">Tham gia</a>
+                                    <a href="#" class="btn btn-dark btn-sm">Xem chi tiết</a>
+                                </td>
+                            </tr>
+
+                            <!-- Phiên đấu giá 3 -->
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="{% static 'app/image/p.png' %}" alt="Slide 3" class="img-thumbnail me-3" style="width: 100px;">
+                                        <p class="mb-0">Lắc tay bạc</p>
+                                    </div>
+                                </td>
+                                <td>$2,000,000</td>
+                                <td>$2,500,000</td>
+                                <td>2 ngày nữa</td>
+                                <td>Đã kết thúc</td>
+                                <td>
+                                    <a href="#" class="btn btn-secondary btn-sm mb-1">Tham gia</a>
+                                    <a href="#" class="btn btn-dark btn-sm">Xem chi tiết</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock cart_content %}
