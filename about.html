@@ -4,21 +4,27 @@
 
 
 	<!-- ================ start banner area ================= -->
-	<section  style="background-image: url('/static/AppAuction/img/slider5.png ');background-color: #cccccc; height:700px; background-position: center;
+	<section  style="background-image: url('/static/AppAuction/img/banner2.jpg');background-color: #cccccc; height:700px; background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative; " id="blog" >
 		<div class="container h-100 ">
-			<div style="text-align: center; padding-top:300px;">
-				<div  >
-					<h1>Contact Us</h1>
+			<div style="text-align: center; padding-top:100px;">
+				<div >
+					<h1 style ="color: WhiteBlue; ">Giới Thiệu Về Công Ty</h1>
 					<nav aria-label="breadcrumb" class="banner-breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"> <b><a href="{% url 'home-page' %}">Home</a> </b> </li>
-              <li class="breadcrumb-item" aria-current="page"> <b> About Us  </b> </li>
+              <li class="breadcrumb-item"> <b><a href="{% url 'home-page' %}" style = "font-size: 30px;color: Black;">Trang Chủ</a> </b> </li>
             </ol>
           </nav>
 				</div>
+        <div style="text-align: center; margin-top: 10px; background: rgba(236, 234, 234, 0.8); padding: 50px; border-radius: 40px;">
+          <h3>Chào Mừng Quý Khách Hàng Đến Với Công Ty Đấu Giá Trang Sức Jewelry T1</h3>
+          <p style = "font-size: 20px;">Chúng tôi là một nhà đấu giá hàng đầu chuyên về đồ trang sức xa xỉ và tinh xảo.
+             Sứ mệnh của chúng tôi là kết nối những nhà sưu tập và người đam mê với những báu vật tinh xảo, độc nhất vô nhị.
+             Từ những thiết kế cổ điển đến những kiệt tác đương đại, chúng tôi giới thiệu một bộ sưu tập được tuyển chọn kỹ lưỡng gồm những tác phẩm đặc biệt để đáp ứng sở thích của mọi người yêu thích đồ trang sức.</p>
+          <p style = "font-size: 20px;">Với cam kết về chất lượng và tính xác thực, chúng tôi đảm bảo rằng mỗi tác phẩm đều kể một câu chuyện và mang giá trị vượt thời gian.
+             Hãy cùng chúng tôi khám phá nghệ thuật và nghề thủ công đằng sau mỗi viên ngọc lấp lánh.</p>
 			</div>
     </div>
 	</section>
@@ -48,28 +54,28 @@
               <div class="row">
                 <div class="col-lg-5">
                   <div class="form-group">
-                    <input class="form-control" name="lot_title" id="name" type="text" placeholder="Title" value="{{ lot.product_name }}"  required >
+                    <input class="form-control" name="lot_title" id="name" type="text" placeholder="Tiêu Đề" value="{{ lot.product_name }}"  required >
                   </div>
                   <div class="form-group">
-                    <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name" {% if user.is_authenticated %} value="{{ user.username }}" {% endif %}
+                    <input class="form-control" name="name" id="name" type="text" placeholder="Nhập Tên Của Bạn" {% if user.is_authenticated %} value="{{ user.username }}" {% endif %}
                       required >
                   </div>
                   <div class="form-group">
-                    <input class="form-control" name="email" id="email" type="email" placeholder="Enter email address" {% if user.is_authenticated %} value="{{ user.email }}" {% endif %}
+                    <input class="form-control" name="email" id="email" type="email" placeholder="Nhập Địa Chỉ Email" {% if user.is_authenticated %} value="{{ user.email }}" {% endif %}
                     required >
                   </div>
                   <div class="form-group">
-                    <input class="form-control" name="phone" id="phone" type="number" placeholder="Enter Phone Number">
+                    <input class="form-control" name="phone" id="phone" type="number" placeholder="Nhập Số Điện Thoại">
                   </div>
                 </div>
                 <div class="col-lg-7">
                   <div class="form-group">
-                      <textarea class="form-control different-control w-100" name="message" id="message" cols="30" rows="5" placeholder="Enter Message"></textarea>
+                      <textarea class="form-control different-control w-100" name="message" id="message" cols="30" rows="7" placeholder="Nhập Tin Nhắn ?"></textarea>
                   </div>
                 </div>
               </div>
               <div class="form-group text-center text-md-right mt-3">
-                <input type="submit" value="Send Message" class="btn btn-primary">
+                <input type="submit" value="Gửi Tin Nhắn" class="btn btn-primary">
                 </form>
               </div>
             
@@ -81,22 +87,22 @@
           <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-home"></i></span>
             <div class="media-body">
-              <h3>Vasai West</h3>
-              <p>Mahashtra,India</p>
+              <h3>Tô Ký</h3>
+              <p>QuangTrung,Quận 12, TP HCM</p>
             </div>
           </div>
           <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-headphone"></i></span>
             <div class="media-body">
-              <h3><a href="tel:454545654">+91 9730519508</a></h3>
-              <p>Mon to Fri 9am to 6pm</p>
+              <h3><a href="tel:454545654">+87 9730519508</a></h3>
+              <p>Thứ 2 đến thứ 7 làm việc từ 8 giờ sáng đến 10 giờ tối</p>
             </div>
           </div>
           <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-email"></i></span>
             <div class="media-body">
-              <h3><a href="#">melody@aukshan.com</a></h3>
-              <p>Send us your query anytime!</p>
+              <h3><a href="#">FakerQuyVuong@gmail.com</a></h3>
+              <p>Hãy gửi cho chúng tôi thắc mắc của bạn bất cứ lúc nào!</p>
             </div>
           </div>
         </div>
