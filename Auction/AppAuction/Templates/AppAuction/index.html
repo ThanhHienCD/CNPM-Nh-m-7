@@ -87,18 +87,20 @@
             <div class="row no-gutters align-items-center pt-60px" style="height: 550px;">
               <div class="col-5 d-none d-sm-block">
                 <div class="hero-banner__img">
-                  <img class="img-fluid"  width="900" height="900" src="{% static 'AppAuction/img/home/slider_car.png' %}" alt="">
+                  <img class="img-fluid"  width="900" height="900" src="{% static 'AppAuction/img/home/Nhan-05.png' %}" alt="">
                 </div>
               </div>
               <div class="col-sm-7 col-lg-6 offset-lg-1 pl-4 pl-md-5 pl-lg-0">
                 <div class="hero-banner__content">
-                  <h4>Shop is fun</h4>
-                  <h1>Audi Q5 Premium</h1>
-                  <p>Capitalize on low hanging fruit to identify a ballpark.</p>
-                  <p>Initial bid : $ 50000 </p>
-                  <p>Current bid: $65500</p>
+                  <h4>Mua Sắm Thật Vui</h4>
+                  <h1>Nhẫn Trắng 14K Đính Đá Topaz PNJ</h1>  
+                  <p>Với sự kết hợp giữa sắc xanh tinh tế của đá Topaz cùng vẻ lấp lánh của những viên đá trắng,
+                     PNJ mang đến tuyệt tác nhẫn vàng đá Topaz như những người phụ nữ kiêu hãnh cùng gu thời trang thời thượng của mình.</p>
+                  <p>Giá Ban Đầu: 10.000.000 Đ </p>
+                  <p>Giá Hiện Tại: 25.000.000 Đ</p>
                   
-                  <a class="button button-hero" href="#">Bid Now</a>
+                  <a class="button button-hero" href="#">Đặt Giá</a>
+
                 </div>
               </div>
             </div>
@@ -127,13 +129,13 @@
           </div>
           <div class="col-sm-7 col-lg-6 offset-lg-1 pl-4 pl-md-5 pl-lg-0">
             <div class="hero-banner__content">
-              <h4>Shop is fun</h4>
+              <h4>Mua sắm thật vui</h4>
               <h1>{{ item.product_name }}</h1>
               <p>{{ item.category }}</p>
-              <p>Initial bid : $ {{ item.base_price|intcomma }} </p>
-              <p>Current bid: $ {{ item.base_price }}</p>
+              <p>Giá Ban Đầu:  {{ item.base_price|intcomma }} Đ </p>
+              <p>Giá Hiện Tại:  {{ item.base_price }} Đ </p>
               
-              <a class="button button-hero" href="{{ item.get_absolute_url }}">Bid Now</a>
+              <a class="button button-hero" href="{{ item.get_absolute_url }}">Đặt Giá</a>
             </div>
           </div>
         </div>
@@ -178,11 +180,11 @@
   <section class="section-margin calc-60px">
     <div class="container">
       <div class="section-intro pb-60px">
-        <p>Live Auction</p>
-        <h2>Latest <span class="section-intro__style">Auction</span></h2> 
+        <p>Đấu Giá Trực Tiếp</p>
+        <h2>Đấu Giá <span class="section-intro__style">Mới Nhất</span></h2> 
         <button class="btn btn-success" style=" position: relative;
         top: -30px;
-        left: 990px; "> <a href="{% url 'auction:search-page' %}" style="color: #ffffff;" > View More </a> </button>
+        left: 990px; "> <a href="{% url 'auction:search-page' %}" style="color: #ffffff;" > Xem Nhiều </a> </button>
       </div>
       <div class="row">
         {% if items_live %}
@@ -193,9 +195,9 @@
             <div class="card-product__img">
               <img  style="width: 250px; height:270px;"  class="card-img" src="{{ item.main_photo.url }}" alt="">
               {% if item.is_live %}
-              <button  class="btn btn-primary" id="badge" >Live</button>
+              <button  class="btn btn-primary" id="badge" >Trực Tiếp</button>
               {% else %}
-              <button  class="btn btn-danger" id="badge" >Not Live</button>
+              <button  class="btn btn-danger" id="badge" >Không Trực Tiếp</button>
               {% endif %}
               <ul class="card-product__imgOverlay">
                 <li><button><i class="ti-search"></i></button></li>
@@ -223,11 +225,11 @@
   <section class="section-margin calc-60px">
       <div class="container">
         <div class="section-intro pb-60px">
-          <p>Popular Item in the market</p>
-          <h2>Trending <span class="section-intro__style">Product</span></h2>
+          <p>Trang Sức Phổ Biến</p>
+          <h2>Sản Phẩm <span class="section-intro__style">Thịnh Hành</span></h2>
           <button class="btn btn-success" style=" position: relative;
           top: -30px;
-          left: 990px; "> <a href="{% url 'auction:search-page' %}" style="color: #ffffff;" > View More </a> </button>
+          left: 990px; "> <a href="{% url 'auction:search-page' %}" style="color: #ffffff;" > Xem Nhiều </a> </button>
         </div>
         <div class="row">
          {% for item in items_trending %}
@@ -237,9 +239,9 @@
               <div class="card-product__img">
                 <img  style="width: 250px; height:270px;"  class="card-img" src="{{ item.main_photo.url }}" alt="">
                 {% if item.is_live %}
-              <button  class="btn btn-primary" id="badge" >Live </button>
+              <button  class="btn btn-primary" id="badge" >Trực Tiếp </button>
               {% else %}
-              <button  class="btn btn-danger" id="badge" >Not Live</button>
+              <button  class="btn btn-danger" id="badge" >Không Trực Tiếp</button>
               {% endif %}
                 <ul class="card-product__imgOverlay">
                   <li><button><i class="ti-search"></i></button></li>
@@ -250,7 +252,7 @@
               <div class="card-body">
                 <p>{{ item.category }}</p>
                 <h4 class="card-product__title"><a href="{{ item.get_absolute_url }}">{{ item.product_name }}</a></h4>
-                <p class="card-product__price">$ {{ item.base_price }}</p>
+                <p class="card-product__price"> {{ item.base_price }} Đ</p>
               </div>
             </div>
           </div>
@@ -263,15 +265,15 @@
     
     
   <!-- ================ offer section start ================= --> 
-  <section class="offer" id="parallax-1" data-anchor-target="#parallax-1" data-300-top="background-position: 20px 30px" data-top-bottom="background-position: 0 20px">
+  <section class="offer" id="parallax-1" data-anchor-target="#parallax-1" data-300-top="background-position: 20px 100px" data-top-bottom="background-position: 0 20px">
       <div class="container">
         <div class="row">
           <div class="col-xl-5">
             <div class="offer__content text-center">
-              <h3>Up To 50% Off</h3>
-              <h4>Winter Sale</h4>
-              <p>Him she'd let them sixth saw light</p>
-              <a class="button button--active mt-3 mt-xl-4" href="#">Shop Now</a>
+              <h3>Giảm giá lên đến 50%</h3>
+              <h4>Giảm giá mùa xuân</h4>
+              <p>Chúng tôi sẽ cho họ một mùa xuân tươi đẹp</p>
+              <a class="button button--active mt-3 mt-xl-4" href="#">Shooping Ngay Bây Giờ</a>
             </div>
           </div>
         </div>
@@ -283,11 +285,11 @@
     <section class="section-margin calc-60px">
       <div class="container">
         <div class="section-intro pb-60px">
-          <p>Popular Item in the market</p>
-          <h2>Best <span class="section-intro__style">Sellers</span></h2>
+          <p>Trang Sức Phổ Biến</p>
+          <h2>Bán<span class="section-intro__style"> Chạy Nhất</span></h2>
           <button class="btn btn-success" style=" position: relative;
           top: -30px;
-          left: 990px; "> <a href="{% url 'auction:search-page' %}" style="color: #ffffff;" > View More </a> </button>
+          left: 990px; "> <a href="{% url 'auction:search-page' %}" style="color: #ffffff;" > Xem Nhiều </a> </button>
         </div>
     
          
@@ -304,9 +306,9 @@
                  <div class="card-product__img">
                    <img  style="width: 250px; height:270px;"  class="card-img" src="{{ item.main_photo.url }}" alt="">
                    {% if item.is_live %}
-                   <button  class="btn btn-primary" id="badge" >Live</button>
+                   <button  class="btn btn-primary" id="badge" >Trực Tiếp</button>
                    {% else %}
-                   <button  class="btn btn-danger" id="badge" >Not Live</button>
+                   <button  class="btn btn-danger" id="badge" >Không Trực Tiếp</button>
                    {% endif %}
                    <ul class="card-product__imgOverlay">
                      <li><button><i class="ti-search"></i></button></li>
@@ -321,17 +323,17 @@
                   </div>
                   <div class="card-product-title" >
                   <h3  class="product-view-p"><a href="{{ item.get_absolute_url }}">{{ item.product_name }}</a></h3>
-                  <h5>Category: {{ item.category }}</h5>
-                  <h4 > Price : ${{ item.base_price |intcomma }}</h4>
-                  <h5 class="product-view-p"  > Year dated :{{ item.year_published }}</h5>
+                  <h5>Loại: {{ item.category }}</h5>
+                  <h4 > Giá : {{ item.base_price |intcomma }} Đ</h4>
+                  <h5 class="product-view-p"  > Năm :{{ item.year_published }}</h5>
                   <p  class="product-view-p" > {{item.description}} <p>
-                  <button class="button primary-btn" >Bid Now</button>
+                  <button class="button primary-btn" >Đặt Giá</button>
                   </div>
                 </div>
                  <div class="card-body">
                    <p>{{ item.category }}</p>
                    <h4 class="card-product__title"><a href="{{ item.get_absolute_url }}">{{ item.product_name }}</a></h4>
-                   <p class="card-product__price">$ {{ item.base_price }}</p>
+                   <p class="card-product__price"> {{ item.base_price }} Đ</p>
                  </div>
                </div>
              </div>
@@ -349,24 +351,25 @@
   <section class="blog">
       <div class="container">
         <div class="section-intro pb-60px">
-          <p>Popular Item in the market</p>
-          <h2>Latest <span class="section-intro__style">News</span></h2>
+          <p>Trang Sức Phổ Biến Trên Thị Trường</p>
+          <h2>Tin Tức<span class="section-intro__style"> Mới Nhất </span></h2>
         </div>
 
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="card card-blog">
               <div class="card-blog__img">
-                <img class="card-img rounded-0" src="/static/AppAuction/img/blog/blog1.png" alt="">
+                <img class="card-img rounded-0" src="/static/AppAuction/img/blog/Blog1.png" alt="" style ="height: 250px;">
               </div>
               <div class="card-body">
                 <ul class="card-blog__info">
-                  <li><a href="#">By Admin</a></li>
-                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
+                  <li><a href="#">Tạo Bởi Admin</a></li>
+                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Bình Luận</a></li>
                 </ul>
-                <h4 class="card-blog__title"><a href="single-blog.html">The Richland Center Shooping News and weekly shooper</a></h4>
-                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
-                <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
+                <h4 class="card-blog__title"><a href="https://vnexpress.net/pnj-ra-mat-bo-suu-tap-trang-suc-masterpiece-4829599.html">PNJ ra mắt bộ sưu tập trang sức Masterpiece</a></h4>
+                <p>Masterpiece lấy cảm hứng từ vẻ đẹp ẩn sâu trong đại dương, sa mạc,
+                   thác nước, được chế tác thủ công với khóa masterpiece đặc trưng của thương hiệu...</p>
+                <a class="card-blog__link" href="https://vnexpress.net/pnj-ra-mat-bo-suu-tap-trang-suc-masterpiece-4829599.html">Đọc Thêm <i class="ti-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -374,16 +377,18 @@
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="card card-blog">
               <div class="card-blog__img">
-                <img class="card-img rounded-0" src="/static/AppAuction/img/blog/blog2.png" alt="">
+                <img class="card-img rounded-0" src="/static/AppAuction/img/blog/Blog2.jpg" alt="" style ="height: 250px;">
               </div>
               <div class="card-body">
                 <ul class="card-blog__info">
-                  <li><a href="#">By Admin</a></li>
-                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
+                  <li><a href="#">Tạo Bởi Admin</a></li>
+                  <li><a href="#"><i class="ti-comments-smiley"></i> 3 Bình Luận </a></li>
                 </ul>
-                <h4 class="card-blog__title"><a href="single-blog.html">The Shopping News also offers top-quality printing services</a></h4>
-                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
-                <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
+                <h4 class="card-blog__title"><a href="https://vnexpress.net/cac-trung-tam-doji-trang-hoang-dip-giang-sinh-4545825.html">Các trung tâm DOJI trang hoàng dịp Giáng sinh</a></h4>
+                <p>
+                  Giáng sinh là một trong những ngày lễ lớn được người dân chào đón, nhất là giới trẻ.
+                  Đường phố và nhiều điểm tham quan, vui chơi giải trí, trung tâm thương mại, cửa hàng... </p>
+                <a class="card-blog__link" href="https://vnexpress.net/cac-trung-tam-doji-trang-hoang-dip-giang-sinh-4545825.html">Đọc Thêm <i class="ti-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -391,16 +396,18 @@
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="card card-blog">
               <div class="card-blog__img">
-                <img class="card-img rounded-0" src="/static/AppAuction/img/blog/blog3.png" alt="">
+                <img class="card-img rounded-0" src="/static/AppAuction/img/blog/Blog3.jpg" alt="" style = "height: 250px;">
               </div>
               <div class="card-body">
                 <ul class="card-blog__info">
-                  <li><a href="#">By Admin</a></li>
-                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
+                  <li><a href="#">Tạo Bởi Admin</a></li>
+                  <li><a href="#"><i class="ti-comments-smiley"></i> 4 Bình Luận</a></li>
                 </ul>
-                <h4 class="card-blog__title"><a href="single-blog.html">Professional design staff and efficient equipment you’ll find we offer</a></h4>
-                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
-                <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
+                <h4 class="card-blog__title"><a href="https://vnexpress.net/meez-ra-mat-bo-suu-tap-kim-cuong-moi-4474240.html">Meez ra mắt bộ sưu tập kim cương mới</a></h4>
+                <p>Theo đại diện Meez, bộ sưu tập kim cương 2022 có ý nghĩa đặc biệt, giúp chủ nhân tăng sức hút và truyền tải giá trị cá nhân.
+                   Hãng dẫn lại câu nói nổi tiếng của Elizabeth Taylor - biểu tượng sắc đẹp Hollywood,
+                   từng hai lần đoạt giải Oscar - để nói về loạt nhẫn,khuyên tai... </p>
+                <a class="card-blog__link" href="https://vnexpress.net/meez-ra-mat-bo-suu-tap-kim-cuong-moi-4474240.html">Đọc Thêm <i class="ti-arrow-right"></i></a>
               </div>
             </div>
           </div>
