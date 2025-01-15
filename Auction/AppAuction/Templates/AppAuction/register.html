@@ -2,15 +2,19 @@
 {% load static %}
 {% block body %}
 
-	<section class="blog-banner-area" id="category">
+<section class="blog-banner-area" id="category">
+	<section  style="background-image: url('/static/AppAuction/img/Meo.jpg');background-color: #cccccc; height:700px; background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative; " id="blog" >
 		<div class="container h-100">
 			<div class="blog-banner">
 				<div class="text-center">
-					<h1>Register</h1>
+					<h1>Đăng Ký</h1>
 					<nav aria-label="breadcrumb" class="banner-breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="{% url 'home-page' %}">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Register</li>
+              <li class="breadcrumb-item"><a href="{% url 'home-page' %}">Trang Chủ</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Đăng Ký</li>
             </ol>
           </nav>
 				</div>
@@ -29,43 +33,43 @@
 				<div class="col-lg-6">
 					<div class="login_box_img">
 						<div class="hover">
-							<h4>Already have an account?</h4>
-							<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
-							<a class="button button-account" href="{% url 'login' %}">Login Now</a>
+							<h4>Bạn Đã Có Tài Khoản ?</h4>
+							<p>Khoa học và công nghệ đang có những tiến bộ mỗi ngày và một ví dụ điển hình là</p>
+							<a class="button button-account" href="{% url 'login' %}">Đăng Nhập Ngay</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="login_form_inner register_form_inner">
-						<h3>Create an account</h3>
+						<h3>Tạo Tài Khoản</h3>
 						<form class="row login_form" action="{% url 'register' %}" method="post" id="register_form" >
                             {% csrf_token %}
                             <div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="fname" name="firstname" placeholder="First name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'first Name'">
+								<input type="text" class="form-control" id="fname" name="firstname" placeholder="Họ" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Họ'">
                             </div>
                             <div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="lname" name="lastname" placeholder="last name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'">
+								<input type="text" class="form-control" id="lname" name="lastname" placeholder="Tên" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tên'">
 							</div>
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="name" name="username" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+								<input type="text" class="form-control" id="name" name="username" placeholder="Tài Khoản" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tài Khoản'">
 							</div>
 							<div class="col-md-12 form-group">
-								<input type="email" class="form-control" id="email" name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
+								<input type="email" class="form-control" id="email" name="email" placeholder="Địa Chỉ Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Địa Chỉ Email'">
+             </div>
+              <div class="col-md-12 form-group">
+								<input type="password" class="form-control" id="password" name="password" placeholder="Mật Khẩu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mật Khẩu'">
               </div>
               <div class="col-md-12 form-group">
-								<input type="password" class="form-control" id="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
-              </div>
-              <div class="col-md-12 form-group">
-								<input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'">
+								<input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Xác Nhận Lại Mật Khẩu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Xác Nhận Lại Mật Khẩu'">
 							</div>
 							<div class="col-md-12 form-group">
 								<div class="creat_account">
 									<input type="checkbox" id="f-option2" name="selector">
-									<label for="f-option2">Keep me logged in</label>
+									<label for="f-option2">Lưu Tài Khoản Đăng Ký</label>
 								</div>
 							</div>
 							<div class="col-md-12 form-group">
-								<button type="submit" value="submit" class="button  w-100">Register</button>
+								<button type="submit" value="submit" class="button  w-100">Đăng Ký</button>
 							</div>
 						</form>
 					</div>

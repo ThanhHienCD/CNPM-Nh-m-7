@@ -13,18 +13,18 @@
 {% endblock %}
 {% block body %}
 <!-- ================ start banner area ================= -->	
-<section  style="background-image: url('/static/AppAuction/img/slider1.png ');background-color: #cccccc; height:700px; background-position: center;
+<section  style="background-image: url('/static/AppAuction/img/banner5.jpg ');background-color: #cccccc; height:700px; background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 position: relative; " id="blog" >
   <div class="container h-100 ">
     <div style="text-align: center; padding-top:300px;">
       <div  >
-					<h1>Shop Category</h1>
+					<h1>Tìm Kiếm Sản Phẩm</h1>
 					<nav aria-label="breadcrumb" class="banner-breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="{% url 'home-page' %}">Home </a></li>
-              <li class="breadcrumb-item active" aria-current="page"> Search Preference</li>
+              <li class="breadcrumb-item"><a href="{% url 'home-page' %}">Trang Chủ</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Tùy chọn tìm kiếm</li>
             </ol>
           </nav>
 				</div>
@@ -40,7 +40,7 @@ position: relative; " id="blog" >
       <div class="row">
         <div class="col-xl-3 col-lg-4 col-md-5">
           <div class="sidebar-categories">
-            <div class="head">Categories</div>
+            <div class="head">Danh Mục</div>
             <ul class="main-categories">
               <li class="common-filter">
                 <form action="{% url 'auction:search-page' %}" method=get >
@@ -48,7 +48,7 @@ position: relative; " id="blog" >
                   <ul>
                     <li {% if not category %} class=" filter-list selected" {% endif %}>       
                       <input class="pixel-radio" type="radio" id="food" name="category">
-                      <a href="{% url 'auction:search-page' %}">All</a> </li> 
+                      <a href="{% url 'auction:search-page' %}">Tất Cả</a> </li> 
                       {% for c in categories %}        
                        <li {% if category.slug == c.slug %}class=" filter-list selected" {% endif %}>           
                        <input class="pixel-radio" type="radio" id="food" name="category">
@@ -92,16 +92,16 @@ position: relative; " id="blog" >
           <div class="filter-bar d-flex flex-wrap align-items-center">
             <div class="sorting">
               <select>
-                <option value="1">Default sorting</option>
-                <option value="1">Latest</option>
-                <option value="1">Oldest</option>
-                <option value="1">Trending</option>
+                <option value="1">Sắp Xếp Mặc Định</option>
+                <option value="1">Mới Nhất</option>
+                <option value="1">Cũ Nhất</option>
+                <option value="1">Hot Nhất</option>
               </select>
             </div>
            
             <div>
               <div class="input-group filter-bar-search">
-                <input  name="search_box" type="text" placeholder="Search_box" style="width: 250px;">
+                <input  name="search_box" type="text" placeholder="Tìm Kiếm" style="width: 250px;">
                 <div class="input-group-append">
                   <button type="submit"><i class="ti-search"></i></button>
                 </div>
@@ -120,9 +120,9 @@ position: relative; " id="blog" >
                   <div class="card-product__img">
                     <img class="card-img" src="{{ item.main_photo.url }}" alt="">
                     {% if item.is_live %}
-              <button  class="btn btn-primary" id="badge" >Live</button>
+              <button  class="btn btn-primary" id="badge" >Trực Tiếp</button>
               {% else %}
-              <button  class="btn btn-danger" id="badge" >Not Live</button>
+              <button  class="btn btn-danger" id="badge" >Không Trực Tiếp</button>
               {% endif %}
                     <ul class="card-product__imgOverlay">
                       <li><button><i class="ti-search"></i></button></li>
@@ -136,7 +136,7 @@ position: relative; " id="blog" >
                   <div class="card-body">
                     <p>{{ item.category }}</p>
                  <h4 class="card-product__title"><a href="{{ item.get_absolute_url }}">{{ item.product_name }}</a></h4>
-                    <p class="card-product__price">$ {{ item.base_price |intcomma }}</p>
+                    <p class="card-product__price"> {{ item.base_price |intcomma }} Đ</p>
                   </div>
                 </div>
               </div>
@@ -149,9 +149,9 @@ position: relative; " id="blog" >
                   <div class="card-product__img">
                   <a href="{{ item.get_absolute_url }} "><img class="card-img" src="{{item.main_photo.url}}" alt="" style="width: 300px; height:300px;" ></a>
                   {% if item.is_live %}
-              <button  class="btn btn-primary" id="badge" >Live</button>
+              <button  class="btn btn-primary" id="badge" >Trực Tiếp</button>
               {% else %}
-              <button  class="btn btn-danger" id="badge" >Not Live</button>
+              <button  class="btn btn-danger" id="badge" >Không Trực Tiếp</button>
               {% endif %} 
                   <ul class="card-product__imgOverlay">
                       <li><button><i class="ti-search"></i></button></li>
@@ -168,7 +168,7 @@ position: relative; " id="blog" >
               </div>
               {% endfor %}
               {% else %}
-              <h2>No item found related to the query</h2>
+              <h2>Không tìm thấy mục nào liên quan đến tìm kiếm</h2>
               {% endif %}
               {% endif %}
             </div>
@@ -184,8 +184,8 @@ position: relative; " id="blog" >
 	<section class="related-product-area">
 		<div class="container">
 			<div class="section-intro pb-60px">
-        <p>Popular Item in the market</p>
-        <h2>Top <span class="section-intro__style">Product</span></h2>
+        <p>Trang Sức Phổ Biến Trên Thị Trường</p>
+        <h2>Sản Phẩm<span class="section-intro__style"> Hàng Đầu</span></h2>
       </div>
 			<div class="row">
         {% if lots %}
@@ -195,9 +195,9 @@ position: relative; " id="blog" >
             <div class="card-product__img">
             <a href="{{ lot.get_absolute_url }}"><img class="card-img" src="{{lot.main_photo.url}}" alt="" style="width: 300px; height:300px;" ></a>
             {% if lot.is_live %}
-              <button  class="btn btn-primary" id="badge" >Live</button>
+              <button  class="btn btn-primary" id="badge" >Trực Tiếp</button>
               {% else %}
-              <button  class="btn btn-danger" id="badge" >Not Live</button>
+              <button  class="btn btn-danger" id="badge" >Không Trực Tiếp</button>
               {% endif %}  
             <ul class="card-product__imgOverlay">
                 <li><button><i class="ti-search"></i></button></li>
@@ -210,13 +210,13 @@ position: relative; " id="blog" >
             <div class="card-body">
               <p>{{ lot.category }}</p>
               <h4 class="card-product__title"><a href="{{ lot.get_absolute_url }}">{{ lot.product_name }}</a></h4>
-              <p class="card-product__price">$ {{ lot.base_price | intcomma}}</p>
+              <p class="card-product__price"> {{ lot.base_price | intcomma}} Đ</p>
             </div>
           </div>
         </div>
        {% endfor %}
        {% else %}
-       <h1>No Item available to showcase</h1>
+       <h1>Không có mục nào có sẵn để giới thiệu</h1>
        {% endif %}
         
         

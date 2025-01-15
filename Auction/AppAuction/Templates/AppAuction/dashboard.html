@@ -14,18 +14,18 @@
 {% block body %}
     
 <!-- ================ start banner area ================= -->	
-<section  style="background-image: url('/static/AppAuction/img/slider1.png ');background-color: #cccccc; height:700px; background-position: center;
+<section  style="background-image: url('/static/AppAuction/img/banner6.png ');background-color: #cccccc; height:700px; background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative; " id="blog" >
 		<div class="container h-100 ">
 			<div style="text-align: center; padding-top:300px;">
 				<div  >
-                <h1>Dashboard</h1>
+                <h1 style = "color: yellow;">Dashboard</h1>
                 <nav aria-label="breadcrumb" class="banner-breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{% url 'home-page' %}">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Wishlist</li>
+          <li class="breadcrumb-item"><a href="{% url 'home-page' %}">Trang Chủ</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Danh Sách Mong Muốn</li>
         </ol>
       </nav>
             </div>
@@ -54,10 +54,10 @@
 				<thead>
 				  <tr>
 					<th scope="col">ID</th>
-					<th scope="col">Enquiry timstamp</th>
-					<th scope="col">Auction Item</th>
+					<th scope="col">Thời Gian Yêu Cầu</th>
+					<th scope="col">Sản Phẩm Đấu Giá</th>
 				
-					<th scope="col">View item</th>
+					<th scope="col">Xem</th>
 				  </tr>
 				</thead>
 
@@ -72,7 +72,7 @@
 						<td>{{contact.lot}}</td>
 			
 						<td>   <div class="col-md-12 form-group">
-                            <button type="submit" value="submit"  class="button button-tracking"><a href="{{ contact.get_absolute_url }}" style="color: aliceblue;" >View Item</a></button>
+                            <button type="submit" value="submit"  class="button button-tracking"><a href="{{ contact.get_absolute_url }}" style="color: aliceblue;" >Xem</a></button>
                         </div>
                     </td>
                     </tr>
@@ -81,7 +81,7 @@
 					{% endfor %}
 
 			{% else %}
-			<h1>You have not made any enquiries</h1>
+			<h1>Bạn chưa thực hiện bất kỳ yêu cầu nào</h1>
 					{% endif %}
 				
 

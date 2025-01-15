@@ -45,7 +45,7 @@ def login(request):
         user=auth.authenticate(username=username,password=password)
         if user is not None:
             auth.login(request,user)
-            messages.add_message(request, messages.SUCCESS, 'You have now logged in successfully')
+            messages.add_message(request, messages.SUCCESS, 'Bạn Đã Đăng Nhập Thành Công')
             return redirect('dashboard')
         else:
             messages.add_message(request, messages.ERROR, 'Invalid Credentials')
@@ -56,7 +56,7 @@ def login(request):
 def logout(request):
     if request.method == 'POST':
         auth.logout(request)
-        messages.add_message(request, messages.SUCCESS, 'You have been logged out successfullt')
+        messages.add_message(request, messages.SUCCESS, 'Bạn Đã Đăng Xuất Thành Công')
         return redirect('home-page')
         
         
