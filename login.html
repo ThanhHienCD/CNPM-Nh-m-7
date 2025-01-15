@@ -3,14 +3,18 @@
 {% load static %}
 {% block body %}
 <section class="blog-banner-area" id="category">
+	<section  style="background-image: url('/static/AppAuction/img/login.jpg');background-color: #cccccc; height:700px; background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative; " id="blog" >
 		<div class="container h-100">
 			<div class="blog-banner">
 				<div class="text-center">
-					<h1>Login / Register</h1>
+					<h1>Đăng Nhập / Đăng Ký</h1>
 					<nav aria-label="breadcrumb" class="banner-breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Login</li>
+              <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Đăng Nhập</li>
             </ol>
           </nav>
 				</div>
@@ -29,32 +33,32 @@
 				<div class="col-lg-6">
 					<div class="login_box_img">
 						<div class="hover">
-							<h4>New to our website?</h4>
-							<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
-							<a class="button button-account" href="{% url 'register' %}">Create an Account</a>
+							<h4>Bạn mới vào trang web của chúng tôi?</h4>
+							<p>Khoa học và công nghệ đang có những tiến bộ mỗi ngày và một ví dụ điển hình là..</p>
+							<a class="button button-account" href="{% url 'register' %}">Tạo Một Tài Khoản</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="login_form_inner">
-						<h3>Log in to enter</h3>
+						<h3>Đăng Nhập</h3>
 						<form class="row login_form" action="{% url 'login' %}" method="post"  >
                             {% csrf_token %}
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="name" name="username" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+								<input type="text" class="form-control" id="name" name="username" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tài Khoản'">
 							</div>
 							<div class="col-md-12 form-group">
-								<input type="password" class="form-control" id="name" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+								<input type="password" class="form-control" id="name" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mật Khẩu'">
 							</div>
 							<div class="col-md-12 form-group">
 								<div class="creat_account">
 									<input type="checkbox" id="f-option2" name="selector">
-									<label for="f-option2">Keep me logged in</label>
+									<label for="f-option2">Lưu Tài Khoản Đăng Nhập</label>
 								</div>
 							</div>
 							<div class="col-md-12 form-group">
-								<button type="submit" value="submit" class="button  w-100">Log In</button>
-								<a href="#">Forgot Password?</a>
+								<button type="submit" value="submit" class="button  w-100">Đăng Nhập</button>
+								<a href="#">Quên Mật Khẩu ?</a>
 							</div>
 						</form>
 					</div>
@@ -66,9 +70,5 @@
 
 
 
-
-
-
-
-
+	
 {% endblock %}
