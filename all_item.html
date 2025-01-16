@@ -97,12 +97,12 @@
 
           
           <div class="section-intro pb-60px">
-            <p>Popular Item On Auction</p>
-            <h2>Trending <span class="section-intro__style">Product</span></h2>
+            <p>Sản Phẩm Đấu Giá Phổ Biến</p>
+            <h2>Trending <span class="section-intro__style">Sản Phẩm</span></h2>
           </div>
           <div class="row">
             <div id="sidebar">     
-              <h3>Categories</h3>    
+              <h3>Loại Hàng</h3>    
                <ul>       
                  <li {% if not category %} class="selected" {% endif %}>         
                    <a href="{% url 'auction:all-item' %}">All</a> </li> 
@@ -125,9 +125,9 @@
                   <a href="{{item.get_absolute_url}}"></a><img  style="width: 250px; height:300px;" class="card-img" src="{{ item.main_photo.url }}" alt=""></a>
                   {% if item.is_live %}
                   
-                  <button  class="btn btn-primary" id="badge" >Live</button>
+                  <button  class="btn btn-primary" id="badge" >Trực Tiếp</button>
                   {% else %}
-                  <button  class="btn btn-danger" id="badge" >Not Live</button>
+                  <button  class="btn btn-danger" id="badge" >Không Trực Tiếp</button>
                   {% endif %}
                   <ul class="card-product__imgOverlay">
                     <li><button><i class="ti-search"></i></button></li>  
@@ -147,11 +147,11 @@
                     </div>
                     <div class="card-product-title" >
                     <h3  class="product-view-p"><a href="{{ item.get_absolute_url }}">{{ item.product_name }}</a></h3>
-                    <h5>Category: {{ item.category }}</h5>
-                    <h4 > Price : ${{ item.base_price |intcomma }}</h4>
-                    <h5 class="product-view-p"  > Year dated :{{ item.year_published }}</h5>
+                    <h5>Loại Hàng: {{ item.category }}</h5>
+                    <h4 >Giá : {{ item.base_price |intcomma }}Đ</h4>
+                    <h5 class="product-view-p"  > Năm :{{ item.year_published }}</h5>
                     <p  class="product-view-p" > {{item.description}} <p>
-                    <button class="button primary-btn" >Bid Now</button>
+                    <button class="button primary-btn" >Đặt Giá</button>
                     </div>
                   </div>
 
@@ -170,7 +170,7 @@
             </div>
             {% endfor %}
            {% else %}
-            <h1>No items trending yet,visit home page for more info.</h1>
+            <h1>Chưa có sản phẩm nào thịnh hành, hãy truy cập trang chủ để biết thêm thông tin.</h1>
             {% endif %}
           </div>
 
