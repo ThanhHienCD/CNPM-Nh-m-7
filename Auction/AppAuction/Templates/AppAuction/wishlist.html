@@ -21,11 +21,11 @@
 		<div class="container h-100 ">
 			<div style="text-align: center; padding-top:300px;">
 				<div  >
-                <h1>Wishlist</h1>
+                <h1>Danh sách mong muốn</h1>
                 <nav aria-label="breadcrumb" class="banner-breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{% url 'home-page' %}">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Wishlist</li>
+          <li class="breadcrumb-item"><a href="{% url 'home-page' %}">Trang Chủ</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Danh sách mong muốn</li>
         </ol>
       </nav>
             </div>
@@ -50,8 +50,8 @@
                         {% if wishlists %}
                         <tr>
                             <th scope="col">ID</th>
-                            <th scope="col">Product</th>
-                            <th scope="col">Date</th>
+                            <th scope="col">Sản Phẩm</th>
+                            <th scope="col">Ngày</th>
                           
                             
                         </tr>
@@ -93,7 +93,7 @@
                     {% endfor %}
 
 			{% else %}
-			<h2>You have not wishlisted any items yet</h2>
+			<h2>Bạn chưa thêm bất kỳ mục nào vào danh sách mong muốn</h2>
 					{% endif %}
                 </table>
             </div>

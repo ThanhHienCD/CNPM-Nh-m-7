@@ -3,10 +3,10 @@
 {% block body %}
 
 {% if sent %}
-<h1>Email sent successfully</h1>
-<p> {{post.title}} was sent successfully to {{form.cleaned_data.to}}  </p>
+<h1>Email đã được gửi thành công</h1>
+<p> {{post.title}} đã gửi thành công đến {{form.cleaned_data.to}}  </p>
 {% else %}
-<h1>Share {{post.title}} by email </h1>
+<h1>Chia sẻ {{post.title}} bởi email </h1>
 
 <form method="post">
     {{form.as_p}}
