@@ -1,0 +1,220 @@
+/* Chuẩn hóa màu nền toàn bộ trang */
+body {
+    background-color: hsl(0, 0%, 98%);
+}
+
+/* Các tiêu đề với màu sắc đồng nhất */
+h1, h2, h3, h4, h5, h6 {
+    color: hsl(0, 0%, 30%);
+}
+
+/* Các phần tử box với bóng đổ */
+.box-element {
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+/* Ảnh thumbnail */
+.thumbnail {
+    width: 350px;
+    height: 200px;
+    box-shadow: -1px -3px 5px -2px rgba(214, 214, 214, 1);
+}
+
+/* Các phần tử sản phẩm với bo góc */
+.product {
+    border-radius: 0 0 4px 4px;
+}
+
+/* Định nghĩa các phần tử có nền tối */
+.bg-dark {
+    background-color: #424343 !important;
+}
+
+/* Các phần tử layout (cột) */
+.col-lg-3, .col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12 {
+    margin-top: 10px;
+}
+
+/* Các nút với góc bo tròn */
+.btn {
+    border-radius: 0;
+}
+
+/* Hình ảnh trong các dòng sản phẩm */
+.row-image {
+    width: 100px;
+}
+
+/* Các trường nhập liệu trong form */
+.form-field {
+    width: 250px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.pas-row {
+    display: flex;
+    align-items: flex-stretch;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+}
+
+/* Các nút tăng giảm số lượng */
+.chg-quantity {
+    width: 12px;
+    cursor: pointer;
+    display: block;
+    margin-top: 5px;
+    transition: 0.1s;
+}
+
+.chg-quantity:hover {
+    opacity: 0.6;
+}
+
+/* Ẩn các phần tử không cần thiết */
+.hidden {
+    display: none !important;
+}
+
+/* Các phần tử liên quan đến Owl Carousel */
+.owl-carousel .item {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 18px;
+    transition: transform 0.5s ease;
+}
+
+.owl-carousel .item:hover {
+    transform: scale(1.1);
+}
+
+/* Điều chỉnh vị trí các nút điều hướng của Owl Carousel */
+.owl-next {
+    float: right;
+}
+
+.owl-prev {
+    float: left;
+}
+
+.owl-prev span, .owl-next span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Các phần tử với nền gradient */
+.buttermilk {
+    background-color: #fff;
+    background-image: linear-gradient(#fff7ef, #fff);
+    padding: 50px 40px;
+    border: 1px solid #efe8e1;
+    padding-bottom: 20px;
+}
+
+.smbg {
+    background-color: #fff;
+    background-image: linear-gradient(rgba(110, 69, 143, 0.1), #fff);
+}
+
+.curdbgpro {
+    background-color: #fff;
+    background-image: linear-gradient(rgba(10, 77, 123, 0.1), #fff);
+}
+
+/* Định dạng văn bản của phần tử mlkpro */
+.mlkpro {
+    color: #636362;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 15px;
+    width: 43%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Liên kết không có gạch chân */
+.goodnesssec a {
+    text-decoration: none;
+}
+
+
+
+
+
+/* Loại bỏ nút xóa trong input */
+input::-webkit-search-cancel-button {
+    display: none;  /* Tắt nút xóa trong ô input */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Chiều rộng đầy đủ */
+    border: 2px solid #c4c4c4; /* Viền xám mềm */
+    border-radius: 30px; /* Bo góc */
+    transition: border-color 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+.input-group:focus-within {
+    border-color: #555555; /* Thay đổi màu viền khi focus */
+    transform: scale(1.02); /* Phóng to nhẹ khi focus */
+}
+
+.input-group input {
+    border: none !important; /* Xóa viền input */
+    border-radius: 30px 0 0 30px; /* Bo góc cho input */
+    padding-left: 30px; /* Thêm khoảng cách cho nội dung bên trong */
+    outline: none !important; /* Bỏ viền ngoài khi focus */
+    box-shadow: none !important; /* Xóa bóng đổ */
+    width: 100%;
+}
+
+.input-group .btn-search {
+    border: none !important; /* Xóa viền nút */
+    border-left: none !important; /* Không có viền giữa input và nút */
+    background-color: transparent; /* Nền trong suốt */
+    color: #a9a9a9; /* Màu icon tìm kiếm */
+    transition: color 0.3s ease;
+}
+
+.input-group .btn-search:hover {
+    color: #000000; /* Đổi màu icon khi hover */
+}
+
+
+/* chi tiết */
+/* Hiệu ứng cho nút chi tiết khi hover */
+.btn-detail {
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 90%; /* Hoặc một giá trị cố định như 120px */
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Khi hover vào nút */
+.btn-detail:hover {
+    color: #000; /* Chữ đổi thành màu đen */
+    border-color: #ddd; /* Viền khung nhạt hơn */
+    background-color: #ddd; /* Giữ nguyên màu nền nhạt khi hover */
+    transform: scale(0.8); /* Thu nhỏ kích thước nút xuống 80% */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Giữ nguyên bóng đổ khi hover */
+}
+
+
+
+/* Khi bấm vào nút */
+.btn-detail:active {
+    background-color: #333; /* Đổi nền thành màu xám đen khi bấm */
+    color: #fff; /* Đổi màu chữ khi bấm */
+    transform: scale(1.1); /* Phóng to khi bấm */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Thêm bóng đổ đậm khi bấm */
+}

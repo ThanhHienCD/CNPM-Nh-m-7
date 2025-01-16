@@ -1,0 +1,105 @@
+/* Các phần tử liên quan đến Owl Carousel */
+.owl-carousel .item {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 18px;
+    transition: transform 0.5s ease;
+}
+
+.owl-carousel .item:hover {
+    transform: scale(1.1);
+}
+
+/* Điều chỉnh vị trí các nút điều hướng của Owl Carousel */
+.owl-next {
+    float: right;
+}
+
+.owl-prev {
+    float: left;
+}
+
+.owl-prev span, .owl-next span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Các phần tử với nền gradient */
+.buttermilk {
+    background-color: #fff;
+    background-image: linear-gradient(#fff7ef, #fff);
+    padding: 50px 40px;
+    border: 1px solid #efe8e1;
+    padding-bottom: 20px;
+}
+
+.smbg {
+    background-color: #fff;
+    background-image: linear-gradient(rgba(110, 69, 143, 0.1), #fff);
+}
+
+.curdbgpro {
+    background-color: #fff;
+    background-image: linear-gradient(rgba(10, 77, 123, 0.1), #fff);
+}
+
+/*Định dạng hình ảnh trong các phần */
+.goodnessseccont img {
+    width: 70%; 
+    height: auto; 
+    max-width: 300px;
+    margin: 0 auto;
+    display: block; 
+} 
+
+/* Định dạng văn bản của phần tử mlkpro */
+.mlkpro {
+    color: #636362;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 15px;
+    width: 43%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Liên kết không có gạch chân */
+.goodnesssec a {
+    text-decoration: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none !important;
+    border: 2px solid #c4c4c4 !important; /* Màu xám tùy chỉnh */
+    box-shadow: 0 0 20px rgba(143, 143, 143, 0.9) !important; /* Hiệu ứng bóng đổ màu xám */
+    transition: 0.3s ease;
+}
+
+
+.btn-detail {
+    padding: 15px; /* Tăng padding để giống kích thước khung */
+    font-size: 18px; /* Tăng kích thước font chữ */
+    font-weight: bold; /* Làm chữ đậm giống khung "Thời gian bắt đầu" */
+    background-color: #ffffff; /* Nền trắng để giống khung */
+    border: 1px solid #ddd; /* Viền xám nhạt */
+    border-radius: 12px; /* Bo góc tương tự */
+    text-align: center;
+    width: 100%; /* Chiều rộng full */
+    margin: 10px auto; /* Căn giữa khung */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block; /* Đảm bảo chiếm nguyên dòng */
+}
+
+.btn-detail:hover {
+    background-color: #f8f9fa; /* Đổi nền xám nhạt khi hover */
+    transform: scale(1.03); /* Phóng to nhẹ khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Bóng đổ rõ hơn */
+    border-color: #ccc; /* Đổi màu viền nhạt hơn khi hover */
+}
+
+.btn-detail:active {
+    background-color: #f1f1f1; /* Đổi nền khi bấm */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bóng đổ đậm khi bấm */
+    transform: scale(1); /* Không phóng to khi bấm */
+}

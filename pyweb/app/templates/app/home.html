@@ -1,0 +1,129 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block banner_slider %}
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6" aria-label="Slide 7"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7" aria-label="Slide 8"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8" aria-label="Slide 9"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="9" aria-label="Slide 10"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="10" aria-label="Slide 11"></button>
+     
+    
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/1.png' %}" class="d-block w-100" alt="Slide 1" height='600'> 
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/2.png' %}" class="d-block w-100" alt="Slide 2" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/12.png' %}" class="d-block w-100" alt="Slide 3" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/3.png' %}" class="d-block w-100" alt="Slide 4" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/7.png' %}" class="d-block w-100" alt="Slide 8" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/8.png' %}" class="d-block w-100" alt="Slide 9" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/4.png' %}" class="d-block w-100" alt="Slide 5" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/5.png' %}" class="d-block w-100" alt="Slide 6" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/6.png' %}" class="d-block w-100" alt="Slide 7" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/9.png' %}" class="d-block w-100" alt="Slide 10" height='600'>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'app/image/banner/10.png' %}" class="d-block w-100" alt="Slide 11" height='600'>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+{% endblock banner_slider %}
+{% block main-content %}
+<div class="container">
+  <div class="row g-2">
+    {% for product in products %}
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="box-element product text-center">
+        <!-- Bao bọc hình ảnh -->
+        <div style="width: 100%; height: 240px; overflow: hidden; margin: 0;">
+          <img class="thumbnail" src="{{product.ImageURL}}" alt="{{ product.name }}" 
+            style="height: 230px; object-fit: cover; width: 100%; border-radius: 8px;">
+        </div>
+        <small><strong>{{ product.name }}</strong></small>
+        <hr style="width: 90%; margin: 5px auto;">
+
+        <!-- Giá khởi điểm -->
+        <div class="price-info" style="margin: 2px 0; display: flex; justify-content: center; align-items: center;">
+          <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+            <strong> Giá khởi điểm:</strong>
+          </button>
+          <h6 style="font-size: 16px; margin: 2px 0;">{{ product.price | floatformat:0 }} VND</h6>
+        </div>
+
+        <!--Trạng thái-->
+        {% if product.auction %}
+  <div class="price-info" style="margin: 0px 0; display: flex; align-items: center; justify-content: center;">
+    <button class="btn" style="background: none; border: none; padding: 0; font-size: 16px; color: #000; margin-right: 5px;">
+    <strong> Trạng thái:</strong>
+    </button>
+    <h6 style="font-size: 16px; margin: 2px 0;">{{ product.auction.status }}</h6>
+  </div>
+
+  <!-- Hiển thị thời gian bắt đầu nếu có -->
+  {% if product.auction.start_time %}
+    <div class="price-info" style="margin: 4px 0; border: 1px solid #ddd; border-radius: 8px; padding: 10px; background-color: #f9f9f9; width: 90%; text-align: center; margin-left: auto; margin-right: auto;">
+      <div style="font-size: 16px; font-weight: bold; margin-bottom: 2px;">Thời gian bắt đầu</div>
+      <h6 style="font-size: 16px; margin: 2px 0;">Ngày: {{ product.auction.start_time|date:"d/m/Y" }}</h6>
+      <h6 style="font-size: 16px; margin: 2px 0;">Giờ: {{ product.auction.start_time|time:"H:i" }}</h6>
+    </div>
+  {% endif %}
+
+  <!-- Hiển thị thời gian kết thúc nếu có -->
+  {% if product.auction.end_time %}
+    <div class="price-info" style="margin: 4px 0; border: 1px solid #ddd; border-radius: 8px; padding: 10px; background-color: #f9f9f9; width: 90%; text-align: center; margin-left: auto; margin-right: auto;">
+      <div style="font-size: 16px; font-weight: bold; margin-bottom: 2px;">Thời gian kết thúc</div>
+      <h6 style="font-size: 16px; margin: 2px 0;">Ngày: {{ product.auction.end_time|date:"d/m/Y" }}</h6>
+      <h6 style="font-size: 16px; margin: 2px 0;">Giờ: {{ product.auction.end_time|time:"H:i" }}</h6>
+    </div>
+  {% endif %}
+{% endif %}
+<!-- Nút Chi tiết -->
+<div class="mt-1">
+  <a class="btn btn-outline-dark d-flex justify-content-center align-items-center mx-auto btn-detail" href="#" 
+     style="margin-top: 8px;">
+    Chi tiết
+  </a>
+</div>
+
+
+   </div>
+     </div>
+        {% endfor %}
+  </div>
+</div>
+<br /><br />
+{% endblock %}
