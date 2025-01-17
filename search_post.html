@@ -34,10 +34,10 @@
                 <div class="categories_details">
                     <div class="categories_text">
                         <a href="single-blog.html">
-                            <h5>Food</h5>
+                            <h5>Trang Sức</h5>
                         </a>
                         <div class="border_line"></div>
-                        <p>Let the food be finished</p>
+                        <p>Trang Sức Là Vẻ Đẹp</p>
                     </div>
                 </div>
             </div>
@@ -61,10 +61,10 @@
                           <div class="col-md-3">
                               <div class="blog_info text-right">
                                   <div class="post_tag">
-                                      <a href="#">Food,</a>
-                                      <a class="active" href="#">Technology,</a>
-                                      <a href="#">Politics,</a>
-                                      <a href="#">Lifestyle</a>
+                                      <a href="#">Nhẫn,</a>
+                                      <a class="active" href="#">Lắc,</a>
+                                      <a href="#">Vòng,</a>
+                                      <a href="#">Dây Chuyền</a>
                                   </div>
                                   <ul class="blog_meta list">
                                       <li>
@@ -73,17 +73,17 @@
                                           </a>
                                       </li>
                                       <li>
-                                          <a href="#">12 Dec, 2017
+                                          <a href="#">1, 12, 2025
                                               <i class="lnr lnr-calendar-full"></i>
                                           </a>
                                       </li>
                                       <li>
-                                          <a href="#">1.2M Views
+                                          <a href="#">1.2M Lượt Xem
                                               <i class="lnr lnr-eye"></i>
                                           </a>
                                       </li>
                                       <li>
-                                          <a href="#">06 Comments
+                                          <a href="#">06 Bình Luận
                                               <i class="lnr lnr-bubble"></i>
                                           </a>
                                       </li>
@@ -98,7 +98,7 @@
                                           <h2>{{ post.title }}</h2>
                                       </a>
                                       <p> {{ post.body | markdown | truncatewords_html:30}} </p>
-                                      <a href="{{ post.get_absolute_url }}" class="button button-blog">View More</a>
+                                      <a href="{{ post.get_absolute_url }}" class="button button-blog">Xem Nhiều</a>
                                   </div>
                               </div>
                           </div>
@@ -168,14 +168,14 @@
                       </aside>
                      
                       <aside class="single_sidebar_widget popular_post_widget">
-                          <h3 class="widget_title">Popular Posts</h3>
+                          <h3 class="widget_title">Bài Viết Phổ Biến</h3>
                           <div class="media post_item">
                               <img src="/static/AppAuction/img/blog/popular-post/post1.jpg" alt="post">
                               <div class="media-body">
                                   <a href="single-blog.html">
                                       <h3>Space The Final Frontier</h3>
                                   </a>
-                                  <p>02 Hours ago</p>
+                                  <p>02 Giờ Trước</p>
                               </div>
                           </div>
                           
@@ -188,7 +188,7 @@
                           <div class="br"></div>
                       </aside>
                        <aside class="single-sidebar-widget tag_cloud_widget">
-                          <h4 class="widget_title">Tag Clouds</h4>
+                          <h4 class="widget_title">Gắn thẻ</h4>
                           <ul class="list">
                              {% for tag in post.tags.all %}
                               <li>
@@ -202,57 +202,40 @@
                           </ul>
                       </aside>
                       <aside class="single_sidebar_widget post_category_widget">
-                          <h4 class="widget_title">Post Catgories</h4>
+                          <h4 class="widget_title">Đăng Mục Bài Đăng</h4>
                           <ul class="list cat-list">
                               <li>
                                   <a href="#" class="d-flex justify-content-between">
-                                      <p>Technology</p>
-                                      <p>37</p>
+                                      <p>Nhẫn</p>
+                                      <p>5</p>
                                   </a>
                               </li>
                               <li>
                                   <a href="#" class="d-flex justify-content-between">
-                                      <p>Lifestyle</p>
-                                      <p>24</p>
+                                      <p>Lắc</p>
+                                      <p>4</p>
                                   </a>
                               </li>
                               <li>
                                   <a href="#" class="d-flex justify-content-between">
-                                      <p>Fashion</p>
-                                      <p>59</p>
+                                      <p>Vòng</p>
+                                      <p>2</p>
                                   </a>
                               </li>
                               <li>
                                   <a href="#" class="d-flex justify-content-between">
-                                      <p>Art</p>
-                                      <p>29</p>
+                                      <p>Dây Chuyền</p>
+                                      <p>3</p>
                                   </a>
                               </li>
                               <li>
-                                  <a href="#" class="d-flex justify-content-between">
-                                      <p>Food</p>
-                                      <p>15</p>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#" class="d-flex justify-content-between">
-                                      <p>Architecture</p>
-                                      <p>09</p>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#" class="d-flex justify-content-between">
-                                      <p>Adventure</p>
-                                      <p>44</p>
-                                  </a>
-                              </li>
-                          </ul>
+                                  
                           <div class="br"></div>
                       </aside>
                       <aside class="single-sidebar-widget newsletter_widget">
-                          <h4 class="widget_title">Newsletter</h4>
+                          <h4 class="widget_title">Bản Tin</h4>
                           <p>
-                              Here, I focus on a range of items and features that we use in life without giving them a second thought.
+                            Ở đây, tôi tập trung vào một loạt các trang sức và vẻ đẹp mà chúng có thể mang đến cho con người mà không cần suy nghĩ nhiều.
                           </p>
                           <div class="form-group d-flex flex-row">
                               <div class="input-group">
@@ -264,9 +247,9 @@
                                   <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email address" onfocus="this.placeholder = ''"
                                       onblur="this.placeholder = 'Enter email'">
                               </div>
-                              <a href="#" class="bbtns">Subcribe</a>
+                              <a href="#" class="bbtns">ĐăngKý</a>
                           </div>
-                          <p class="text-bottom">You can unsubscribe at any time</p>
+                          <p class="text-bottom">Bạn có thể hủy đăng ký bất cứ lúc nào</p>
                           <div class="br"></div>
                       </aside>
                      
@@ -278,14 +261,14 @@
   <!--================Blog Area =================-->
 
   {% if tag %}
-  <h2>POst tagged with , {{ tag.name }}</h2>
+  <h2>Bài đăng được gắn thẻ với , {{ tag.name }}</h2>
 
 {% endif %}
   <!--================Instagram Area =================-->
   <section class="instagram_area">
     <div class="container box_1620">
       <div class="insta_btn">
-        <a class="btn theme_btn" href="#">Follow us on instagram</a>
+        <a class="btn theme_btn" href="#">Theo Dõi Instagram</a>
       </div>
       <div class="instagram_image row m0">
         <a href="#"><img src="/static/AppAuction/img/instagram/ins-1.jpg" alt=""></a>
