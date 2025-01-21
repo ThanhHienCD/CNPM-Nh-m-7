@@ -83,11 +83,17 @@ WSGI_APPLICATION = 'Auction.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+         'ENGINE': 'mssql',
+         'NAME': 'WebApp',
+         'USER': 'SA',
+         'PASSWORD': '123456Duy@',
+         'HOST': 'localhost',
+         'PORT':'',
+         'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+         },
+    }   
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
