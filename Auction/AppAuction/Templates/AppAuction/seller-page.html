@@ -130,7 +130,7 @@
               <h3  class="product-view-p"><a href="{{ lots.get_absolute_url }}">{{ item.product_name }}</a></h3>
               <h5>Loại: {{ lots.category }}</h5>
               <h4 > Giá : ${{ lots.base_price |intcomma }}</h4>
-              <h5 class="product-view-p"  > Năm :{{ lots.year_published }}</h5>
+              <h5 class="product-view-p"  > Ngày tháng năm{{ lots.year_published }}</h5>
               <p  class="product-view-p" > {{lots.description}} <p>
               <button class="button primary-btn" >Đặt Giá</button>
               </div>

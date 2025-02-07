@@ -117,14 +117,14 @@ AUTH_PASSWORD_VALIDATORS = [
 #channels config
 
 
-ASGI_APPLICATION = 'Auction.routing.application'
 
+ASGI_APPLICATION = "Auction.asgi.application"
 
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],
+           "hosts": [('127.0.0.1', 6379)],
         },
     },
 }
@@ -132,14 +132,6 @@ CHANNEL_LAYERS = {
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
-
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
-USE_I18N = True
-
-USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -177,3 +169,8 @@ MESSAGE_TAGS = {
 #EMAIL_HOST_PASSWORD='############'
 #EMAIL_PORT=587
 #EMAIL_USE_TLS=True
+LANGUAGE_CODE = 'vi'
+TIME_ZONE = 'Asia/Ho_Chi_Minh'
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True

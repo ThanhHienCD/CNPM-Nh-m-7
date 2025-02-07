@@ -76,11 +76,11 @@ class ChatConsumer(WebsocketConsumer):
         # accept connection
         
         self.user = self.scope['user']
-        #print(self.user)
+        print(self.user)
         self.id = self.scope['url_route']['kwargs']['item_id']
-        #self.slug = self.scope['url_route']['kwargs']['slug']
+        self.slug = self.scope['url_route']['kwargs']['slug']
         self.room_group_name = 'auction_%s' % self.id 
-        #print(self.room_group_name)
+        print(self.room_group_name)
         # join room group
         async_to_sync(self.channel_layer.group_add)(
         self.room_group_name,
