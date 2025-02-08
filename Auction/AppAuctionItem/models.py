@@ -1,4 +1,3 @@
-
 from django.db import models
 from datetime import datetime
 from django.urls import reverse
@@ -57,12 +56,9 @@ class Lot(models.Model):
     
     
     
-    
     class Meta:
-        ordering = ('product_name',)  # Sắp xếp theo product_name
-        indexes = [
-            models.Index(fields=['id', 'slug']),  
-        ]
+        ordering=('product_name',)
+        index_together=(('id','slug'),)
     
     
     def __str__(self):

@@ -1,6 +1,6 @@
 from channels.auth import AuthMiddlewareStack
 from channels.routing import ProtocolTypeRouter, URLRouter
-import auctionItem.routing
+import AppAuctionItem.routing
 
 
 application = ProtocolTypeRouter({
@@ -8,7 +8,7 @@ application = ProtocolTypeRouter({
  'websocket': AuthMiddlewareStack(
      
     URLRouter(
-    auctionItem.routing.websocket_urlpatterns
+    AppAuctionItem.routing.websocket_urlpatterns
     )
  ),
-}) 
+})

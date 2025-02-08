@@ -14,11 +14,7 @@ urlpatterns = [
     path('<slug:category_slug>/',views.all_item, name="items_by_category"),
     path('search/<slug:category_slug>/',views.search, name="items_by_category"),
     path('<int:item_id>/<slug:slug>/',views.single_item, name="single-item"),
-   
-   
-    
-    
-    
+ 
     
     
 ]

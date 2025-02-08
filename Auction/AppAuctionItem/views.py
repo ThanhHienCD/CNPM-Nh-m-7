@@ -11,10 +11,13 @@ from django.conf import settings
 from django.utils.safestring import mark_safe
 import json
 from django.core.mail import send_mail
+from django.http import JsonResponse
+from django.core.cache.backends.base import DEFAULT_TIMEOUT
+from django.views.decorators.cache import cache_page
+from django.core.cache import cache
+from django.conf import  settings
 
-
-
-
+CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 # Create your views here.
 
 def all_item(request,category_slug=None):
@@ -221,4 +224,3 @@ def subscribe(request):
         return redirect('home-page')
    
     return redirect('home-page')
-        

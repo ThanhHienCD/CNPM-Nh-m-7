@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  webauction:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "8000:8000"
+      - "5678:5678"
+    volumes:
+      - .:/app
+    environment:
+      - DEBUG=1
+    command: ["sh", "-c", "python -m debugpy --wait-for-client --listen 0.0.0.0:5678 Auction/manage.py runserver 0.0.0.0:9000 --nothreading --noreload"]

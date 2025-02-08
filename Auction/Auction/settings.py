@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'Blog.apps.BlogConfig',
     'taggit',
-    'channels',
+    
 ]
 
 MIDDLEWARE = [
@@ -112,19 +114,28 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+CACHES = { 
+        'default': { 
+            'BACKEND': 'django_redis.cache.RedisCache', 
+            'LOCATION': 'redis://127.0.0.1:6379/1', 
+            'OPTIONS': { 
+                'CLIENT_CLASS': 'django_redis.client.DefaultClient', 
+            } 
+        } 
+} 
+SESSION_ENGINE = "django.contrib.sessions.backends.cache" 
+SESSION_CACHE_ALIAS = "default"
 
 #channels config
+ASGI_APPLICATION = 'Auction.asgi.application'  # Đảm bảo đường dẫn này đúng với tên file asgi.py
 
 
 
-ASGI_APPLICATION = "Auction.asgi.application"
-
-CHANNEL_LAYERS = {
+CHANNEL_LAYERS = {  
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-           "hosts": [('127.0.0.1', 6379)],
+            "hosts": [('127.0.0.1', 6379)],
         },
     },
 }

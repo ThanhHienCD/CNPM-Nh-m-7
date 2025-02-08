@@ -3,7 +3,12 @@ from django.http import HttpResponse
 from AppAuctionItem.models import Lot
 from math import ceil
 from AppAuctionItem.models import Category
+from django.core.cache.backends.base import DEFAULT_TIMEOUT
+from django.views.decorators.cache import cache_page
+from django.core.cache import cache
+from django.conf import  settings
 
+CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 # Create your views here.
 
 def index(request):
