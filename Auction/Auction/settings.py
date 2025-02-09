@@ -175,11 +175,11 @@ MESSAGE_TAGS = {
 #Email configuraion
 
 
-#EMAIL_HOST='smtp.gmail.com'
-#EMAIL_HOST_USER='melzpereira0509@gmail.com'
-#EMAIL_HOST_PASSWORD='############'
-#EMAIL_PORT=587
-#EMAIL_USE_TLS=True
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER='caoquocduydualeo@gmail.com'
+EMAIL_HOST_PASSWORD='0383176224duytun'
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
 LANGUAGE_CODE = 'vi'
 TIME_ZONE = 'Asia/Ho_Chi_Minh'
 USE_I18N = True

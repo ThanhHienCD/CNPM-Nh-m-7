@@ -8,6 +8,7 @@ from django.views.decorators.cache import cache_page
 from django.core.cache import cache
 from django.conf import  settings
 
+
 CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 # Create your views here.
 
@@ -31,3 +32,5 @@ def about(request):
 
 def contact_us(request):
     return render(request,'AppAuction/contact_us.html')
+
+

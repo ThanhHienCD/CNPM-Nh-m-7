@@ -16,6 +16,8 @@ from django.core.cache.backends.base import DEFAULT_TIMEOUT
 from django.views.decorators.cache import cache_page
 from django.core.cache import cache
 from django.conf import  settings
+from django.http import HttpResponse
+
 
 CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 # Create your views here.
@@ -46,13 +48,9 @@ def all_item(request,category_slug=None):
 
 
 def single_item(request,item_id,slug):
-    lot=get_object_or_404(Lot,
-                          id=item_id,
-                          slug=slug,
-                          )
-    auction= get_object_or_404(
-        Auction,id=item_id
-    )
+    lot=get_object_or_404(Lot,id=item_id,slug=slug,)
+    
+    auction= get_object_or_404(Auction,item_id=item_id)
     
     print(auction)
     ####SEller ka page banao
@@ -66,7 +64,7 @@ def single_item(request,item_id,slug):
         room= request.user
         print(room)
     slugged=Lot.objects.filter(slug=slug)
-    category=get_object_or_404(Category,slug=slug) 
+    #category=get_object_or_404(Category,slug=slug) 
     
     
     context={
@@ -75,7 +73,7 @@ def single_item(request,item_id,slug):
         'username':mark_safe(json.dumps(request.user.username)),
         'lot':lot,
         'slugged':slugged,
-        'category':category,
+        'category':lot.category,
         'room':room,
         'endingtime': auction.curr_time,
         'total_views':5,
@@ -131,22 +129,24 @@ def seller_page(request,seller):
     
     #print(lot.filter(seller=seller[0]))
     return render(request,'AppAuction/seller-page.html' ,{ 'lot':lots,'seller':seller } )
-    
+        
 def contact(request,id):
-    lot=get_object_or_404(Lot,pk=id)
-    context={
-        'lot':lot,
-         #'title': sproperty.title 
-    }
-    return render(request,'AppAuction/contact_us.html',context)
+        lot=get_object_or_404(Lot,id=id)
+        context={'lot':lot,}
+        return render(request,'AppAuction/contact_us.html',context)
 
 def contact_submit(request):
     if request.method =='POST':
+        print("DEBUG: Form Data -", request.POST)
         print("Post")
-        lot_id=request.POST['lot_id']
+        lot_id = request.POST.get('lot_id', '').strip()
+        if not lot_id.isdigit():
+            messages.error(request, "")
+            return redirect('dashboard')
+        lot_id = int(lot_id)  # Chuyển thành số nguyên
         slug=request.POST['slug']
         lot=request.POST.get('lot_title')
-        name=request.POST['name']
+        name=request.POST['name']   
         email=request.POST.get('email')
         #phone=request.POST.get('phone')
         message=request.POST.get('message')
@@ -224,3 +224,4 @@ def subscribe(request):
         return redirect('home-page')
    
     return redirect('home-page')
+###############

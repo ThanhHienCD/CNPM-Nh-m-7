@@ -3,6 +3,7 @@ from datetime import datetime
 from django.urls import reverse
 from django.utils import timezone
 from django.contrib.auth import get_user_model
+
 User=get_user_model()
 # Create your models here.
 class Category(models.Model):
@@ -101,8 +102,8 @@ class Contact(models.Model):
 class Auction(models.Model):
     start =  models.DateTimeField(auto_now=False)
     curr_time =  models.DateTimeField(auto_now=False)
-    item = models.OneToOneField(
-    Lot, on_delete=models.CASCADE, related_name="auction")
+    item = models.OneToOneField(Lot, on_delete=models.CASCADE, related_name="auction")
+    
     
     
     def __str__(self):
@@ -131,3 +132,5 @@ class Subscribe(models.Model):
         return self.email
   
         
+###############
+

@@ -182,8 +182,8 @@
 						<h3>{{ lot.product_name }}</h3>
 
 
-						<h3> Ngày tháng năm: <span style="color: #6495ed;" >{{ lot.year_published | date:"l,d,F,Y"}} </span> </h3>
-						<h2> Giá Ban Đầu :  {{ lot.base_price }}Đ</h2>
+						<h3><span style="color: #6495ed;" >{{ lot.year_published | date:"l,d,F,Y"}} </span> </h3>
+						<h2> Giá Ban Đầu :  {{ lot.base_price }} VNĐ</h2>
 						
 						<ul class="list">
 							<li><a class="active" href="{{category.get_absolute_url}}"><span>Loại Hàng</span> {{ lot.category }}</a></li>
@@ -242,7 +242,7 @@
 			  {% if room %}
 
 			  
-			  <button onclick="var result = document.getElementById('chat-message-input'); var sst = result.value; if( !isNaN( sst )) result.value= parseInt(result.value)+parseInt(10); return false;" class="increase items-count" type="button"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
+			  <button onclick="var result = document.getElementById('chat-message-input'); var sst = result.value; if( !isNaN( sst )) result.value= parseInt(result.value)+parseInt(200000); return false;" class="increase items-count" type="button"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
 			  
      
 			  {% else %}
@@ -477,7 +477,7 @@
 										<tr>
 											
 											<td> <h4>Tên</h4></td>
-											<td><h4>Dấu thời gian</h4></td>
+											<td><h4>Thời gian đấu giá</h4></td>
 											
 								
 											<td>   <div class="col-md-12 form-group">
@@ -807,7 +807,7 @@ document.querySelector('#chat-message-submit').onclick = function(e) {
 	
 	let bidValue = parseInt(message);
 	if (!isNaN(bidValue)) {
-    messageInputDom.value = bidValue + 10;
+    messageInputDom.value = bidValue + 200000;
 	} else {
     console.error("Giá trị nhập vào không hợp lệ!");
 	}
@@ -844,7 +844,7 @@ function createMessage(data){
 	button.classList.add("button");
 	button.classList.add("button-tracking");
 	button.textContent=data.price;
-	document.querySelector("#chat-message-input").value =parseInt(data["price"]) + 10;
+	document.querySelector("#chat-message-input").value =parseInt(data["price"]) + 200000;
 	pTag.appendChild(button);
 	td.appendChild(pTag);
 
@@ -895,9 +895,9 @@ var countDownDate = new Date(endingtime).getTime();
   minutesSpan.innerHTML="00";
   secondsSpan.innerHTML="00";
   if(winner){
-  document.getElementById('winner').textContent="The Winner is " +winner;
+  document.getElementById('winner').textContent="Người Chiến Thắng Là " +winner;
   }else{
-	document.getElementById('winner').textContent="No Winner declared";
+	document.getElementById('winner').textContent="Không Có Người Chiến Thắng";
 
   }
 
@@ -905,7 +905,7 @@ var countDownDate = new Date(endingtime).getTime();
 	  var bidbutton=document.getElementById("chat-message-submit");
 	  if( bidbutton.disabled === true )
 	  {
-		  document.getElementById("demo").innerHTML = "The Auction has Ended";
+		  document.getElementById("demo").innerHTML = "Cuộc Đấu Giá Đã Kết Thúc";
 	  }
 	}
  },1000); 

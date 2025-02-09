@@ -42,7 +42,11 @@
               <input type="hidden" name="user_id" value="0">
               {% endif %}
               <input type="hidden" name="seller_email" value="{{ lot.seller.email }}" >
-              <input type="hidden" name="lot_id" value="{{ lot.id }}" >
+              {% if lot and lot.id %}
+              <input type="hidden" name="lot_id" value="{{ lot.id }}">
+              {% else %}
+              <input type="hidden" name="lot_id" value="0">
+              {% endif %}
               <input type="hidden" name="slug" value="{{ lot.slug}}">
               <input type="hidden" name="lot_title" value="{{ lot.product_name}}" >
               <div class="row">

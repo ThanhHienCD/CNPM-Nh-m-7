@@ -136,7 +136,7 @@ position: relative; " id="blog" >
                   <div class="card-body">
                     <p>{{ item.category }}</p>
                  <h4 class="card-product__title"><a href="{{ item.get_absolute_url }}">{{ item.product_name }}</a></h4>
-                    <p class="card-product__price"> {{ item.base_price |intcomma }} Đ</p>
+                    <p class="card-product__price"> {{ item.base_price |intcomma }} VNĐ</p>
                   </div>
                 </div>
               </div>
@@ -162,7 +162,7 @@ position: relative; " id="blog" >
                   <div class="card-body">
                     <p>{{ item.category }}</p>
                     <h4 class="card-product__title"><a href="{{ item.get_absolute_url }}">{{ item.product_name }}</a></h4>
-                    <p class="card-product__price">$ {{ item.base_price | intcomma}}</p>
+                    <p class="card-product__price"> {{ item.base_price | intcomma}} VNĐ</p>
                   </div>
                 </div>
               </div>
@@ -210,7 +210,7 @@ position: relative; " id="blog" >
             <div class="card-body">
               <p>{{ lot.category }}</p>
               <h4 class="card-product__title"><a href="{{ lot.get_absolute_url }}">{{ lot.product_name }}</a></h4>
-              <p class="card-product__price"> {{ lot.base_price | intcomma}} Đ</p>
+              <p class="card-product__price"> {{ lot.base_price | intcomma}} VNĐ</p>
             </div>
           </div>
         </div>

@@ -208,7 +208,7 @@
             <div class="card-body">
               <p>{{ item.category }}</p>
               <h4 class="card-product__title"><a href="{{ item.get_absolute_url }}">{{ item.product_name }}</a></h4>
-              <p class="card-product__price">$ {{ item.base_price }}</p>
+              <p class="card-product__price"> {{ item.base_price }} VNĐ</p>
             </div>
           </div>
         </div>
@@ -252,7 +252,7 @@
               <div class="card-body">
                 <p>{{ item.category }}</p>
                 <h4 class="card-product__title"><a href="{{ item.get_absolute_url }}">{{ item.product_name }}</a></h4>
-                <p class="card-product__price"> {{ item.base_price }} Đ</p>
+                <p class="card-product__price"> {{ item.base_price }} VNĐ</p>
               </div>
             </div>
           </div>
@@ -323,9 +323,9 @@
                   </div>
                   <div class="card-product-title" >
                   <h3  class="product-view-p"><a href="{{ item.get_absolute_url }}">{{ item.product_name }}</a></h3>
-                  <h5>Loại: {{ item.category }}</h5>
-                  <h4 > Giá : {{ item.base_price |intcomma }} Đ</h4>
-                  <h5 class="product-view-p"  > Năm :{{ item.year_published }}</h5>
+                  <h5> Loại: {{ item.category }}</h5>
+                  <h4> Giá : {{ item.base_price |intcomma }} VNĐ</h4>
+                  <h5 class="product-view-p"  > {{ item.year_published }}</h5>
                   <p  class="product-view-p" > {{item.description}} <p>
                   <button class="button primary-btn" >Đặt Giá</button>
                   </div>
@@ -333,7 +333,7 @@
                  <div class="card-body">
                    <p>{{ item.category }}</p>
                    <h4 class="card-product__title"><a href="{{ item.get_absolute_url }}">{{ item.product_name }}</a></h4>
-                   <p class="card-product__price"> {{ item.base_price }} Đ</p>
+                   <p class="card-product__price"> {{ item.base_price }} VNĐ</p>
                  </div>
                </div>
              </div>
