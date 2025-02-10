@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404,redirect
-from AppAuctionItem.models import Lot,Category,Auction,Seller,Contact,Wishlist,Subscribe
+from AppAuctionItem.models import Lot,Category,Auction,Seller,Contact,Wishlist,Subscribe,Order
 from django.contrib import messages
 from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404
@@ -17,7 +17,6 @@ from django.views.decorators.cache import cache_page
 from django.core.cache import cache
 from django.conf import  settings
 from django.http import HttpResponse
-
 
 CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 # Create your views here.
@@ -225,3 +224,30 @@ def subscribe(request):
    
     return redirect('home-page')
 ###############
+def checkout(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        address = request.POST.get('address')
+        city = request.POST.get('city')
+        state = request.POST.get('state')
+        zip_code = request.POST.get('zip_code')
+        phone = request.POST.get('phone')
+        items_json = request.POST.get('itemsJson')
+        total_price = sum([int(item['quantity']) * float(item['price']) for item in eval(items_json).values()])
+        
+        order = Order.objects.create(
+            name=name,
+            email=email,
+            address=address,
+            city=city,
+            state=state,
+            zip_code=zip_code,
+            phone=phone,
+            items_json=items_json,
+            total_price=total_price
+        )
+        messages.success(request, f'Đơn hàng {order.id} đã được đặt thành công!')
+        return redirect('checkout')
+    
+    return render(request, 'AppAuction/checkout.html')
